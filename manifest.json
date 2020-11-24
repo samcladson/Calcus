@@ -1,0 +1,16 @@
+{
+  "name": "Calcus",
+  "description": "Calculate numbers from sites",
+  "version": "1.0.1",
+  "manifest_version": 2,
+  "icons": {
+    "16": "./icons/img1.png",
+    "32": "./icons/img1.png",
+    "48": "./icons/img1.png",
+    "128": "./icons/img1.png"
+  },
+  "background": {
+    "scripts": ["./background.js"]
+  },
+  "permissions": ["tabs", "https://www.google.com/*"]
+}
