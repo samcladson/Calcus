@@ -3,6 +3,3 @@ chrome.tabs.onActivated.addListener((tab) => {
     console.log("injected");
   });
 });
-// const data = document.getSelection().toString();
-
-// console.log(data);
