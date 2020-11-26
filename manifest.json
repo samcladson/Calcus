@@ -12,5 +12,5 @@
   "background": {
     "scripts": ["./background.js"]
   },
-  "permissions": ["tabs", "https://www.google.com/*"]
+  "permissions": ["tabs", "https://www.google.com/"]
 }
