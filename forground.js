@@ -1,12 +1,8 @@
-// if (document.querySelectorAll(".content-kuss-ads")) {
-//   const Adds = Array.from(document.querySelectorAll(".content-kuss-ads"));
-//   Adds.map((add) => {
-//     add.remove();
-//   });
-// }
+console.log("Im Forground");
 
-const hplogo = document
-  .querySelector("img#hplogo")
-  .classList.add("hplogo-animation");
-const manifest = (document.createElement("script").src = "./manifest.json");
-console.log(JSON.parse(manifest));
+window.addEventListener("mouseup", () => {
+  const word = window.getSelection().toString().trim();
+  if (word.length > 0 && word != "") {
+    chrome.runtime.sendMessage(word);
+  }
+});
