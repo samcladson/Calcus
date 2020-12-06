@@ -33,6 +33,12 @@
         font-size: 24px;
         font-family: "FontAwesome" !important;
         cursor: pointer;
+        margin-right: 15px;
+      }
+      #audio {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
     </style>
   </head>
@@ -40,7 +46,10 @@
     <div class="container">
       <div id="heading">
         <h3 id="word"></h3>
-        <i id="playAudio" class="fas fa-volume-up"></i>
+        <div id="audio">
+          <i id="playAudio" class="fas fa-volume-up"></i>
+          <p id="audioLable"></p>
+        </div>
       </div>
       <hr />
       <div id="details"></div>

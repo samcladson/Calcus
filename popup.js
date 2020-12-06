@@ -23,12 +23,16 @@ fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${getWord}/`, options)
     const meaning = res[0].meanings[0];
     const definition = meaning.definitions[0].definition;
     const example = meaning.definitions[0].example;
+    const synonyms = meaning.definitions[0].synonyms;
     audioFile = res[0].phonetics[0].audio;
     const details = document.querySelector("#details");
-    details.innerHTML = `<span><b>Definition :</b> ${definition}</span><br>
+    details.innerHTML = `<span><b>Definition :</b> ${definition}</span><hr><br>
                           <span><b>Example : </b>${
                             example ? example : "sorry! No examples found"
-                          }</Span>`;
+                          }</Span><hr><br>
+                          <span><b>Synonyms : </b>${synonyms[0]}, ${
+      synonyms[1]
+    }, ${synonyms[2]}</span>`;
   })
   .catch((err) => {
     console.log(err);
@@ -37,6 +41,12 @@ fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${getWord}/`, options)
 const audio = document.querySelector("#playAudio");
 if (audio) {
   audio.addEventListener("click", () => {
+    // playing indicator lable/
+    const audioLable = document.querySelector("#audioLable");
+    audioLable.innerHTML = "playing..";
+    audioLable.style.display = "block";
+
+    // play audio
     const audioData = new Audio(audioFile);
     audioData.play();
     audioData.addEventListener("playing", () => {
@@ -44,6 +54,7 @@ if (audio) {
     });
     audioData.addEventListener("ended", () => {
       audio.style.color = "black";
+      audioLable.style.display = "none";
     });
   });
 }
