@@ -1,5 +1,6 @@
 window.addEventListener("mouseup", () => {
   const word = window.getSelection().toString().trim().split(" ");
+  console.log(word);
   if (word.length > 1) {
     chrome.runtime.sendMessage({ status: 404, msg: "Please select one word" });
   } else {

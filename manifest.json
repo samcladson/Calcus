@@ -22,5 +22,15 @@
     "default_icon": "./icons/img1.png",
     "default_popup": "./popup.html",
     "default_title": "calcus"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E",
+        "linux": "Ctrl+Shift+K",
+        "windows": "Alt+Shift+P",
+        "mac": "Alt+Shift+P"
+      }
+    }
   }
 }
