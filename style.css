@@ -1,0 +1,28 @@
+body {
+  width: 350px !important;
+  height: auto;
+  padding: 10px;
+  /* box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5) !important; */
+}
+
+#heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 2s;
+}
+
+.fas {
+  font-size: 24px;
+  font-family: "FontAwesome" !important;
+  cursor: pointer;
+  margin-right: 10px;
+}
+#audio {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#audio p {
+  margin-top: 10px;
+}

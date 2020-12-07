@@ -1,51 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
     <title>Calcus</title>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
     />
-
-    <style>
-      html {
-        width: 350px;
-        height: auto;
-        padding: 10px;
-        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
-      }
-      html::after {
-        content: "";
-        width: 20px;
-        height: 20px;
-        transform: rotate(-45deg);
-        background: #fff;
-        position: absolute;
-        top: -10px;
-        right: 0;
-      }
-      #heading {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .fas {
-        font-size: 24px;
-        font-family: "FontAwesome" !important;
-        cursor: pointer;
-        margin-right: 15px;
-      }
-      #audio {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <div id="heading">
-        <h3 id="word"></h3>
+        <b><h6 id="word"></h6></b>
         <div id="audio">
           <i id="playAudio" class="fas fa-volume-up"></i>
           <p id="audioLable"></p>
@@ -55,5 +26,5 @@
       <div id="details"></div>
     </div>
   </body>
-  <script type="text/javascript" src="./popup.js"></script>
+  <script type="text/javascript" src="popup.js"></script>
 </html>
